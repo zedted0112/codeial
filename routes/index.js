@@ -8,7 +8,11 @@ const router= express.Router();
 const homecontroller= require('../controllers/home_controllers');
 
 console.log("router is loaded")
+// handles all the request for home
 router.get('/',homecontroller.home);
+
+//handles request users
+router.use('/users', require('./users'));
 
 // export
 module.exports=router;
