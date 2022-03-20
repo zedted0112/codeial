@@ -1,4 +1,6 @@
 module.exports.home=function(req,res){
 
-    return res.end('workinhg good');
+   return res.render('home',{
+       title:'home'
+   });
 }
