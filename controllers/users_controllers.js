@@ -1,4 +1,18 @@
 module.exports.profile=function(req,res){
 
-   return res.end('<h1> user profile </h1>');
+ return res.render('user',{
+     user:"user"
+ });
+}
+module.exports.signup=function(req,res){
+return res.render('user_signup',{
+    title:"Signup"
+});
+}
+
+module.exports.signin=function(req,res){
+    return res.render('user_signin',{
+
+title:"Signin"
+    });
 }
