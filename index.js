@@ -9,6 +9,12 @@ const port=8000;
 const db = require('./config/mongoose');
 const expressLayouts= require('express-ejs-layouts');
 
+//express session
+const session= require('express-session');
+const passport=require('passport');
+const passportLocal= require('./config/passport-local-strategy');
+
+
 
 
 //url encoded
@@ -23,12 +29,34 @@ app.use(expressLayouts);
 app.set('layout extractStyles',true);
 app.set('layout extractScripts',true);
 
-// use express router
-app.use('/',require('./routes/index'));
 
 // set  view engine
 app.set('view engine','ejs');
 app.set('views', './views');
+
+
+//use express sessions
+app.use(session({
+   name:'codeial',
+   //will change in deployemet
+   secret:'blahsomething',
+   saveUninitialized:false,
+   resave:false,
+   cookie:{
+       maxAge:(1000*60*100)
+   }
+   
+
+
+}));
+
+//use passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// use express router
+app.use('/',require('./routes/index'));
+
 
 //listen
 app.listen(port,function(err){
