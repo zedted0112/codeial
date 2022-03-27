@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-console.log("momgoose")
+
 
 mongoose.connect('mongodb://localhost/codeial_development');
 

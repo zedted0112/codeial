@@ -13,6 +13,7 @@ const expressLayouts= require('express-ejs-layouts');
 const session= require('express-session');
 const passport=require('passport');
 const passportLocal= require('./config/passport-local-strategy');
+const MongoStore= require('connect-mongo');
 
 
 
@@ -34,7 +35,7 @@ app.set('layout extractScripts',true);
 app.set('view engine','ejs');
 app.set('views', './views');
 
-
+// moango strore is  used to store session cookie
 //use express sessions
 app.use(session({
    name:'codeial',
@@ -44,8 +45,15 @@ app.use(session({
    resave:false,
    cookie:{
        maxAge:(1000*60*100)
-   }
-   
+   },
+   store: MongoStore.create({ mongoUrl: 'mongodb://localhost/codeial_development',
+autoRemove:'disabled' }
+   ,function(err){
+       if(err){
+           console.log(err||" store in mongo store");
+       }
+   })
+  
 
 
 }));

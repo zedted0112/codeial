@@ -9,12 +9,20 @@ module.exports.profile = function (req, res) {
 
 //sign up
 module.exports.signup = function (req, res) {
+
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign-up', {
         title: "Sign up"
     });
 }
 //sign in
 module.exports.signin = function (req, res) {
+    
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign-in', {
 
         title: "Sign in"
@@ -47,6 +55,12 @@ module.exports.create = function (req, res) {
         }
     });
 
+}
+
+//destroy a session or logout
+module.exports.destroySession= function(req,res){
+req.logout();
+    return res.redirect('/');
 }
 
 
