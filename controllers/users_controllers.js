@@ -2,7 +2,8 @@ const User = require('../models/user');
 module.exports.profile = function (req, res) {
 
     return res.render('profile', {
-        title: "user"
+        title: "user",
+   
     });
 }
 
