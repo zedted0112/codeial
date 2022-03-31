@@ -1,0 +1,19 @@
+.navbar{background-color: aliceblue;
+
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+    #logo{
+        color: rgb(218, 45, 45);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+}

@@ -1,0 +1,15 @@
+.navbar {
+  background-color: aliceblue;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700; }
+  .navbar #logo {
+    color: #da2d2d;
+    font-size: 1.5rem;
+    font-weight: 700; }

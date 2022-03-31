@@ -58,8 +58,8 @@ module.exports.create = function (req, res) {
 }
 
 //destroy a session or logout
-module.exports.destroySession= function(req,res){
-req.logout();
+module.exports.destroySession = function (req, res) {   
+    req.logout();
     return res.redirect('/');
 }
 

@@ -1,0 +1,19 @@
+.form--container {
+  margin: 5rem auto;
+  height: 25rem;
+  width: 20rem;
+  border: 2px solid black; }
+  .form--container h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px; }
+  .form--container form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column; }
+  .form--container input {
+    margin: 10px; }
+  .form--container input[type=submit] {
+    color: red;
+    width: 5rem;
+    margin: 20px auto; }

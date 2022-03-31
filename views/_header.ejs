@@ -1,27 +1,31 @@
-<header>
-   <h1>header</h1>
-</header>
+<link rel="stylesheet" href="/css/header.css"> 
 
-<ul>
+
+
+
+<div class="navbar">
+<div id="logo">CodeZed</div>
    <a href="/">home</a>
    <a href="/users/profile">profile</a>
-<% if(locals.user){%>
+
+      <% if(locals.user){%>
 
 
-  <%=user.name%>
-  <li><a href="/users/sign-out"> sign-out</a></li>
+         <%=user.name%>
+         <a href="/users/sign-out"> sign-out</a>
+       
+       
+         <%}else{%>
+       
+       
+       <a href="/users/sign-in">sign in</a>
+       <a href="/users/sign-up">sign up</a>
+       
+          
+          <%}%>
 
 
-  <%}else{%>
+
+</div>
 
 
-<li><a href="/users/sign-in">sign in</a></li>
-<li><a href="/users/sign-up">sign up</a></li>
-
-   
-   <%}%>
-
-
-
-
-</ul>

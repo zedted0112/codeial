@@ -1,5 +1,8 @@
-body{
-  
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins,sans-serif; }
+  body #main {
     margin: 0;
-    text-align: center;
-}
+    height: 100vh; }

@@ -1,0 +1,30 @@
+.form--container{
+margin:5rem auto;
+
+    height: 25rem;
+    width: 20rem;
+  border: 2px solid black;
+
+  h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+
+form{
+margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+ 
+
+}
+input{
+    margin: 10px;
+}
+input[type=submit]{
+    color:red;
+
+    width: 5rem;
+margin:20px auto;
+}
+}
